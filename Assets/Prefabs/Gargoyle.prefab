@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8824664333524232750}
   - component: {fileID: 8824664333516768718}
   - component: {fileID: 6183547221625865226}
-  - component: {fileID: 1576193022424733307}
+  - component: {fileID: 8396846892537001610}
   m_Layer: 0
   m_Name: Gargoyle
-  m_TagString: Untagged
+  m_TagString: Gargoyle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
---- !u!114 &1576193022424733307
+--- !u!114 &8396846892537001610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,12 +79,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8824664333524071950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 256fa791fff3e8545b4903bb1e335093, type: 3}
+  m_Script: {fileID: 11500000, guid: f6fed25a4b8a3ac469fdee19089e1897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   light_cone: {fileID: 2100000, guid: 98a5d7f03b88cef44932b3206c7bd8db, type: 2}
-  garg: {fileID: 8824664333524232750}
-  gargoyle: {fileID: 8824664333524071950}
 --- !u!1 &8824664333524072330
 GameObject:
   m_ObjectHideFlags: 0

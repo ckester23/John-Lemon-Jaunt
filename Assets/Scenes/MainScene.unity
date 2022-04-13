@@ -5789,6 +5789,21 @@ PrefabInstance:
       propertyPath: gameEnding
       value: 
       objectReference: {fileID: 2106016212}
+    - target: {fileID: 8396846892537001610, guid: 308ce6029f1f06e40bf422be707bbee7,
+        type: 3}
+      propertyPath: light_cone
+      value: 
+      objectReference: {fileID: 2100000, guid: 98a5d7f03b88cef44932b3206c7bd8db, type: 2}
+    - target: {fileID: 8396846892537001610, guid: 308ce6029f1f06e40bf422be707bbee7,
+        type: 3}
+      propertyPath: light_cone1
+      value: 
+      objectReference: {fileID: 2100000, guid: 576bb5c071ab2ac499b8f6e4a55b35e7, type: 2}
+    - target: {fileID: 8396846892537001610, guid: 308ce6029f1f06e40bf422be707bbee7,
+        type: 3}
+      propertyPath: light_cone2
+      value: 
+      objectReference: {fileID: 2100000, guid: 73ef3305315cfd04399e9ffb0925ed68, type: 2}
     - target: {fileID: 8824664333524071950, guid: 308ce6029f1f06e40bf422be707bbee7,
         type: 3}
       propertyPath: m_Name
