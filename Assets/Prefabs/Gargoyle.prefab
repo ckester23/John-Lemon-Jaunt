@@ -83,8 +83,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light_cone: {fileID: 2100000, guid: 98a5d7f03b88cef44932b3206c7bd8db, type: 2}
-  john: {fileID: 4144910612669990146, guid: 5034b177473d2a543acd5feb5125db54, type: 3}
   garg: {fileID: 8824664333524232750}
+  gargoyle: {fileID: 8824664333524071950}
 --- !u!1 &8824664333524072330
 GameObject:
   m_ObjectHideFlags: 0

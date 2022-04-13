@@ -5,10 +5,10 @@ using UnityEngine;
 public class ColorController : MonoBehaviour
 {
     public Material light_cone;
-    public GameObject john;
     public Transform garg;
 
-    Rigidbody johnR;
+    GameObject john;
+    Transform johnT;
 
     Color lerpedColor;
 
@@ -18,45 +18,52 @@ public class ColorController : MonoBehaviour
     void Start()
     {
         //light_cone = GetComponentInChildren<SkinnedMeshRenderer>().material;
-        johnR = john.GetComponent<Rigidbody>();
-        light_cone.color = Color.green;
+        
+        light_cone.EnableKeyword("_EMISSION");
+        bool my_bool = light_cone.IsKeywordEnabled("_EMISSION");
+
+        //light_cone.SetColor("_EmissionColor", Color.green);
+        Debug.Log(my_bool);
+        Debug.Log("START");
+        john = GameObject.Find("JohnLemon");
+
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Transform joTran = johnR.transform;
+        johnT = john.transform;
 
-        distance = Vector3.Distance(joTran.position, garg.position);
+        distance = Vector3.Distance(johnT.position, garg.position);
 
-        Debug.Log("john's x = " + joTran.position.x);
-        Debug.Log("Distance = " + distance);
+        //Debug.Log("john's x = " + johnT.position.x);
+        //Debug.Log("Distance = " + distance);
+
         ChangeFlashColor(distance);
 
     }
 
     void ChangeFlashColor(float dist)
     {
-        // If John is less than 3 but more than 2 away, yellow
-        // If John is less than or equal to 2 away, red
-        // If John is over 3 away, green
+        Debug.Log("CHANGE");
+        /* dist = 5, we want total green
+         *  1 - ((5-5) / 2.5) = 1 - (0/2.5) = 1 - 0 = 1
+         *  
+         * dist = 2.5, we want total red
+         *  1 - ((5-2) / 2.5) = 1 - (3/2.5) = 1 - 1 = 0
+         */
 
-        if (dist >= 3.5f)
-        {
-            light_cone.color = Color.green;
-        }
-        else if (dist > 2.5f)
-        {
-            t = dist - 2.5f;
-            DoLerping(Color.yellow, Color.green, t);
-            light_cone.color = lerpedColor;
-        }
-        else
-        {
-            t = dist - 1.5f;
-            DoLerping(Color.red, Color.yellow, t);
-            light_cone.color = lerpedColor;
-        }
+        t = 1f - ((5f - dist) / 2.5f); 
+
+        if (t < 0) { t = 0; }
+        else if ( t > 1) { t = 1; }
+
+        Debug.Log("t = " + t);
+        DoLerping(Color.red, Color.green, t);
+        light_cone.SetColor("_EmissionColor", lerpedColor);
+        
+        
     }
 
     void DoLerping(Color color1, Color color2, float t_val)

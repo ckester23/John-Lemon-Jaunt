@@ -5774,6 +5774,11 @@ PrefabInstance:
       propertyPath: johnR
       value: 
       objectReference: {fileID: 4144910611896920089}
+    - target: {fileID: 1576193022424733307, guid: 308ce6029f1f06e40bf422be707bbee7,
+        type: 3}
+      propertyPath: johnT
+      value: 
+      objectReference: {fileID: 737891705}
     - target: {fileID: 6872488343567870929, guid: 308ce6029f1f06e40bf422be707bbee7,
         type: 3}
       propertyPath: player
